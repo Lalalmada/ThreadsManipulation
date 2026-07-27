@@ -1,6 +1,6 @@
 public class StartingThreads{
     public static void main(String[] args){
-        var t1 = new Thread(new Runner1());
+        var t1 = new Thread(new Runner1());  // algoritmo de time slicing, executa um e executa o outro
         var t2 = new Thread(new Runner2());
 
         t1.start();// sempre que se chama o metodo start, se aloca recursos do sistema para o novo thread
@@ -8,7 +8,7 @@ public class StartingThreads{
     }
 }
 
-class Runner1 implements Runnable{
+class Runner1 implements Runnable{ // interface executavel, possibilita instanciar o corredor
     @Override
     public void run(){
         for(int i=0; i<10;++i){

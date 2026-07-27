@@ -5,8 +5,7 @@ public class SequentialProcess{
         var runner2 = new Runner2();
 
         runner1.execute();
-        runner2.execute();// algoritmo time slicing, executa um, executa outro
-        
+        runner2.execute();// algoritmo sequential por padrão, executa um runner e depois o outro
     }
 }
 
